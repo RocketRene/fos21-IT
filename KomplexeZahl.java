@@ -31,7 +31,10 @@ public class KomplexeZahl {
 
     @Override
     public String toString() {
-        return realteil + " + " + imaginaerteil + "i";
+        return "KomplexeZahl{" +
+                "realteil=" + realteil +
+                ", imaginaerteil=" + imaginaerteil +
+                '}';
     }
 
     @Override
