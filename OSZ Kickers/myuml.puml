@@ -1,0 +1,62 @@
+@startuml
+hide circle
+
+class Mitglied {
+- String name
+- int telefonnummer
+- boolean beitragGezahlt
++  Mitglied()
++  Mitglied(String,int,boolean)
++ String getName()
++ void setName(String)
++ int getTelefonnummer()
++ void setTelefonnummer(int)
++ boolean isBeitragGezahlt()
++ void setBeitragGezahlt(boolean)
++ String toString()
+}
+class Spieler {
+- int trikotnummer
+- String position
++  Spieler(String,int,boolean,int,String)
++ int getTrikotnummer()
++ void setTrikotnummer(int)
++ String getPosition()
++ void setPosition(String)
++ String toString()
+}
+
+class Manschaftsleiter {
+- String mannschaftsName
+- int rabbatHoehe
++  Manschaftsleiter(String,int,boolean,int,String,String,int)
++ String getMannschaftsName()
++ void setMannschaftsName(String)
++ int getRabbatHoehe()
++ void setRabbatHoehe(int)
++ String toString()
+}
+class Trainer {
+- char lizenzklasse
+- int aufwandsentschaedigung
++  Trainer(String,int,boolean,char,int)
++ char getLizenzklasse()
++ void setLizenzklasse(char)
++ int getAufwandsentschaedigung()
++ void setAufwandsentschaedigung(int)
++ String toString()
+}
+class Schiedsrichter {
+- int anzahlSpiele
++  Schiedsrichter(String,int,boolean,int)
++ int getAnzahlSpiele()
++ void setAnzahlSpiele(int)
++ String toString()
+}
+
+
+Mitglied <|-- Spieler
+Spieler <|-- Manschaftsleiter
+Mitglied <|-- Trainer
+Mitglied <|-- Schiedsrichter
+@enduml
